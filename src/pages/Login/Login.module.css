@@ -12,11 +12,10 @@
   background: #fff;
   padding: 30px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
 }
-
 
 .title {
   text-align: center;
@@ -57,7 +56,7 @@
 
 .loginBtn {
   padding: 12px;
-  background: #007bff;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
   border: none;
   color: #fff;
   font-size: 16px;
@@ -67,7 +66,9 @@
 }
 
 .loginBtn:hover {
-  background: #0056b3;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
 }
 
 .signupText {
@@ -78,9 +79,8 @@
 }
 
 .signupLink {
-  color: #007bff;
+  color: #6a11cb;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .signupLink:hover {
@@ -88,7 +88,7 @@
 }
 
 .error {
-    color: #f51008;
+  color: #f51008;
   font-size: 13px;
   margin-top: 4px;
 }
@@ -105,11 +105,11 @@
   .loginBox {
     padding: 20px;
   }
-  
+
   .title {
     font-size: 22px;
   }
-  
+
   .loginBtn {
     font-size: 14px;
   }
