@@ -1,0 +1,60 @@
+.testimonial {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s ease-in-out;
+  height: 100%;
+}
+
+.card:hover {
+ 
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  color: #fff;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.feedback {
+  font-style: italic;
+  margin: 1rem 0;
+  color: #555;
+}
+
+.card:hover .feedback {
+  color: #fff;
+}
+
+.card h3 {
+  margin-top: 0.5rem;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: inherit;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+  background: #1e835b;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #9333ea;
+  opacity: 1;
+}

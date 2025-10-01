@@ -1,0 +1,295 @@
+.aboutSection {
+  text-align: center;
+}
+
+.hero {
+  height: 70vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff; /* Ensure WCAG contrast */
+  margin-bottom: 10vh;
+  background: linear-gradient(45deg, #2563eb, #9333ea, #ff7f50, #1e835b);
+  background-size: 300% 300%;
+  animation: waveColors 20s ease infinite;
+  position: relative;
+  overflow: hidden;
+  filter: url(#wave-filter); /* Apply SVG filter for wavy bottom */
+}
+
+@keyframes waveColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.heroContent .heading {
+  font-size: 5rem;
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.storySection,
+.visionMissionSection,
+.teamSection,
+.valuesSection,
+.achievementsSection,
+.ctaSection {
+  max-width: 1280px;
+  margin: 0 auto 5rem;
+}
+
+.storySection h2,
+.visionMissionSection h2,
+.teamSection h2,
+.valuesSection h2,
+.achievementsSection h2,
+.ctaSection h2 {
+  font-size: 2.25rem;
+  font-family: "El Messiri", sans-serif;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.storySection p {
+  font-size: 1.1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #4a5568;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  animation: fadeIn 1.2s ease-out 0.2s;
+}
+
+.visionMissionGrid,
+.teamGrid,
+.valuesGrid,
+.achievementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.visionMissionCard,
+.teamCard,
+.valueCard,
+.achievementCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+
+.visionMissionCard:hover,
+.teamCard:hover,
+.valueCard:hover,
+.achievementCard:hover {
+  background: linear-gradient(to left, rgb(87, 143, 228), rgb(146, 98, 235));
+  color: #fff !important;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.visionMissionCard:hover h3,
+.visionMissionCard:hover p,
+.teamCard:hover h3,
+.teamCard:hover p,
+.valueCard:hover h3,
+.valueCard:hover p,
+.achievementCard:hover h3,
+.achievementCard:hover p {
+  color: #fff !important;
+}
+.visionMissionCard h3,
+.teamCard h3,
+.valueCard h3,
+.achievementCard h3 {
+  font-size: 1.6rem;
+  font-family: "El Messiri", sans-serif;
+  color: #1a202c;
+  margin-bottom: 0.75rem;
+}
+
+.visionMissionCard p,
+.teamCard p,
+.valueCard p,
+.achievementCard p {
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.teamCard img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid #007bff;
+  transition: transform 0.3s ease;
+}
+
+.teamCard:hover img {
+  transform: scale(1.1);
+}
+
+.ctaSection {
+  position: relative;
+  color: #ffffff; /* Explicit hex for clarity; ensure contrast meets WCAG */
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #578fe4,
+    #9262eb
+  ); /* Changed to angle-based gradient for clarity */
+  transform: skewY(-5deg);
+  transform-origin: top left; /* Ensures correct skew alignment */
+  z-index: -1; /* Negative z-index to ensure it stays behind content */
+}
+
+.ctaSection .content {
+  position: relative;
+  z-index: 1; /* Ensures content is above the pseudo-element */
+  /* Removed transform: skewY(5deg) to avoid potential text rendering issues */
+}
+
+.ctaSection .content h2 {
+  color: #fff;
+}
+.ctaSection p {
+  font-size: 1.2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  background: white;
+  color: #007bff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #007bff;
+  color: white;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .hero .heading {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .storySection h2,
+  .visionMissionSection h2,
+  .teamSection h2,
+  .valuesSection h2,
+  .achievementsSection h2,
+  .ctaSection h2 {
+    font-size: 1.9rem;
+  }
+
+  .visionMissionGrid,
+  .teamGrid,
+  .valuesGrid,
+  .achievementsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .visionMissionCard,
+  .teamCard,
+  .valueCard,
+  .achievementCard {
+    padding: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    height: 40vh;
+  }
+
+
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .storySection p {
+    font-size: 1rem;
+  }
+
+  .visionMissionCard,
+  .teamCard,
+  .valueCard,
+  .achievementCard {
+    padding: 1.25rem;
+  }
+
+  .visionMissionCard h3,
+  .teamCard h3,
+  .valueCard h3,
+  .achievementCard h3 {
+    font-size: 1.4rem;
+  }
+
+  .ctaSection {
+    padding: 2rem 1rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,175 @@
+/* Hero Banner */
+.hero {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+  position: relative;
+
+  background: linear-gradient(45deg, #2563eb, #9333ea, #ff7f50, #1e835b);
+  background-size: 300% 300%;
+  animation: waveColors 20s ease infinite;
+  background-attachment: fixed;
+}
+
+@keyframes waveColors {
+  0% {
+    background-position: top right;
+  }
+  50% {
+    background-position: bottom left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+}
+
+.heroContent .heading {
+  font-size: 5rem;
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Feature Sections */
+.featureSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureImage img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.featureText {
+  flex: 1;
+}
+
+.featureText h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.featureText p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Reverse layout */
+.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 900px) {
+  .hero {
+    height: 70vh;
+    padding: 2rem 1rem;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .featureSection {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .featureText h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsive - Mobiles */
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+    padding: 2rem 1rem;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+  }
+
+  .heroContent .heading {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 0.9rem;
+  }
+
+  .intro {
+    padding: 2rem 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .intro p {
+    font-size: 0.9rem;
+  }
+}

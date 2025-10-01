@@ -1,0 +1,49 @@
+/* Healthcare Theme Colors */
+:root {
+  --accent-green: #10b981;
+  --white: #ffffff;
+}
+
+/* Custom Cursor */
+.customcursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-green);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out, opacity 0.3s ease, scale 0.3s ease;
+  z-index: 9999;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Hover effect for interactive elements */
+a:hover ~ .customcursor,
+button:hover ~ .customcursor,
+input:hover ~ .customcursor,
+textarea:hover ~ .customcursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: #2563eb; /* Switch to primary-blue on hover */
+  border-color: var(--white);
+}
+
+/* Pulse animation for modern look */
+@keyframes pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Hide cursor on mobile screens */
+@media (max-width: 767px) {
+  .customcursor {
+    display: none;
+  }
+}

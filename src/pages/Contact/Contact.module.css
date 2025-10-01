@@ -1,0 +1,276 @@
+.contact {
+  min-height: 100vh;
+  background-color: #f7fafc; /* Light blue-gray for healthcare theme */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+/* Hero (Banner) Section */
+.hero {
+  height: 70vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2b6cb0, #805ad5, #ed8936, #319795);
+  background-size: 300% 300%;
+  animation: waveColors 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContent .heading {
+  font-size: 5rem;
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Form Section */
+.formSection {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+.left {
+  flex: 1;
+  padding: 1rem;
+}
+
+.left h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #2d3748; /* Dark gray */
+  margin-bottom: 1rem;
+}
+
+.left p {
+  font-size: 1rem;
+  color: #4a5568; /* Medium gray */
+  margin-bottom: 1.5rem;
+}
+
+.infoBox {
+  background: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.infoBox p {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.right {
+  flex: 1;
+  padding: 1rem;
+}
+
+.form {
+  background: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroupRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.formGroupRow select,
+.formGroupRow input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .formGroupRow {
+    flex-direction: column;
+  }
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0; /* Light gray */
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #2b6cb0; /* Healthcare blue */
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  display: block;
+  color: #e53e3e; /* Red for errors */
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.success {
+  background: #e6fffa;
+  color: #2f855a; /* Green for success */
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(to left, rgb(87, 143, 228), rgb(146, 98, 235));
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.submitBtn:hover {
+  transform: translateY(-5px);
+}
+
+/* Input box */
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding-left: 50px; /* flag ke liye jagah */
+}
+
+/* Dropdown list */
+.react-tel-input .country-list {
+  max-height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+}
+
+/* Search box inside dropdown */
+.react-tel-input .country-list .search-box {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 8px;
+  font-size: 14px;
+}
+
+/* Footer Info */
+.footerInfo {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2d3748; /* Dark gray */
+  color: #ffffff;
+  font-size: 0.875rem;
+}
+
+/* Animation */
+@keyframes waveColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .formSection {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero {
+    height: 40vh;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroContent .heading {
+    font-size: 3rem;
+  }
+
+  .heroContent p {
+    font-size: 0.875rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+
+  .infoBox {
+    padding: 1rem;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    height: 40vh;
+  }
+}

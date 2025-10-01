@@ -1,0 +1,66 @@
+/* Popup Backdrop */
+.popupBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Container */
+.popup {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  animation: popupFade 0.3s ease-in-out;
+}
+
+/* Buttons inside popup */
+.popup .ctaBtn {
+  margin: 1rem 0.5rem 0 0.5rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #2563eb, #9333ea);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.popup .ctaBtn:hover {
+  background: linear-gradient(to left, #2563eb, #9333ea);
+}
+
+/* Fade-in animation */
+@keyframes popupFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .popup {
+    padding: 1.5rem;
+  }
+
+  .popup .ctaBtn {
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+  }
+}
