@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // for redirect
 import style from "./Signup.module.css";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -234,9 +235,9 @@ export default function Signup() {
         <div className={style.links}>
           <p>
             Already have an account?{" "}
-            <a href="/login" className={style.link}>
+            <Link to="/login" className={style.link}>
               Log In
-            </a>
+            </Link>
           </p>
         </div>
         <div className={style.footerLinks}>

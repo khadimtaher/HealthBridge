@@ -36,7 +36,7 @@ function Login() {
   return (
     <div className={style.loginContainer}>
       <div className={style.loginBox}>
-        <h2 className={style.title}>Welcome Back</h2>
+        <h2 className={style.title}>Login</h2>
 
         <form className={style.form} onSubmit={handleSubmit}>
           <div className={style.inputGroup}>
